@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>User Registration</title>
+    </head>
+    <body>
+        <h1>User Registration</h1>
+
+        <form action="#" method="post">
+
+            <p>
+                <label for="name">Name:</label>
+                <input type="text" name="username" placeholder="사용자의 이름">
+            </p>
+
+            <p>
+                <label for="email">Email:</label>
+                <input type="email" name="email" placeholder="사용자의 이메일 주소">
+            </p>
+
+            <p>
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="비밀번호">
+            </p>
+
+            <p>
+                <label for="Birthdate">Birthdate:</label>
+                <input type="date" name="Birthdate" placeholder="생년월일">
+            </p>
+
+            <p>
+                <label for="number">Age:</label>
+                <input type="number" name="age" placeholder="나이" min="18" max="100">
+            </p>
+
+            <p>
+                <label for="satisfaction">Satisfaction:</label>
+                <input type="range" name="satisfaction" placeholder="만족도" min="1" max="10">
+            </p>
+
+            <p>
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+                <input type="radio" name="gender" value="Other"> Other
+            </p>
+
+            <p>
+                <label for="interests">Interests:</label>
+                <input type="checkbox" name="hobby" value="Coding"> Coding
+                <input type="checkbox" name="hobby" value="Gaming"> Gaming
+                <input type="checkbox" name="hobby" value="Reading"> Reading
+            </p>
+
+            <p>
+                <label for="country">Country</label>
+                <select name="country">
+                    <option value="South Korea">South Korea</option>
+                    <option value="Usa">Usa</option>
+                    <option value="Japan">Japan</option>
+                    <option value="China">China</option> 
+                    <option value="Uk">Uk</option>                     
+                </select>
+            </p>
+
+            <hr>
+            <button type="submit">제출</button>
+            <button type="reset">초기화</button>
+        </form>
+    </body>
+</html>

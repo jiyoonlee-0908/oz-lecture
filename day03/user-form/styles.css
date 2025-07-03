@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+#registration-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+#registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+form p {
+    padding: 5px;
+}
+form > p { 
+    border-bottom: 1px solid #eee;
+}
+label {
+    display: inline-block;
+    width: 100px;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid gray;
+}
+button[type="submit"],
+button[type="reset"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+}
