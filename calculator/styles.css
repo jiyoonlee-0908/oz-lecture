@@ -1,0 +1,73 @@
+/* 전체 화면 가운데 정렬 */
+body{
+  margin:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  background:#f2f5f7;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+/* 카드 형태 */
+.calculator{
+  background:#fff;
+  padding:25px 30px;
+  border-radius:14px;
+  box-shadow:0 15px 35px rgba(0,0,0,.1);
+  width:310px;
+  text-align:center;
+}
+
+/* 제목 */
+.calculator h1{
+  margin:0 0 20px;
+}
+
+/* 디스플레이 */
+#display{
+  width:100%;
+  height:55px;
+  font-size:28px;
+  text-align:right;
+  padding:0 12px;
+  border:2px solid #e0e0e0;
+  border-radius:8px;
+  background:#eceff1;
+  box-sizing:border-box;
+  margin-bottom:18px;
+}
+
+/* 버튼 그리드 (4×4) */
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+button{
+  height:60px;
+  font-size:22px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  color:#fff;
+  background:#616161;
+}
+
+button:hover{opacity:.9}
+
+/* 연산자·기능 키 컬러 */
+button.op   {background:#ffc107;color:#000;}
+button.equal{background:#0069ff;}
+button.clear{background:#d32f2f;}
+
+/* 결과/에러 표시창 */
+.result{
+  margin-top:18px;
+  padding:10px;
+  border-radius:8px;
+  background:#e0f7fa;
+  text-align:left;
+  font-weight:bold;
+}
