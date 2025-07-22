@@ -7,7 +7,7 @@
 
   <!-- Bootstrap 5 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <!-- Bootstrap Icons (optional) -->
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
   <link rel="stylesheet" href="style.css" />
@@ -48,18 +48,22 @@
   <!-- EXPLORE -->
   <section id="explore" class="py-5">
     <div class="container">
-      <!-- Search + Bookmark -->
-      <div class="row g-3 mb-4 align-items-center">
-        <div class="col-lg-6">
-          <input id="searchInput" type="text" class="form-control form-control-lg" placeholder="검색: 예) 마케팅 카피, 코드 리팩토링..." />
+
+      <!-- Search / Filters Row -->
+      <div class="row g-3 mb-3 align-items-center">
+        <div class="col-md-6">
+          <input id="searchInput" type="text" class="form-control form-control-lg"
+                 placeholder="검색: 예) 마케팅 카피, 코드 리팩토링..." />
         </div>
-        <div class="col-lg-6 text-lg-end">
-          <button class="btn btn-outline-secondary btn-lg" id="bookmarkToggle"><i class="bi bi-bookmark"></i> 북마크</button>
+        <div class="col-md-6 d-flex justify-content-md-end gap-2">
+          <button class="btn btn-outline-secondary btn-lg" id="bookmarkToggle">
+            <i class="bi bi-bookmark"></i> 북마크
+          </button>
         </div>
       </div>
 
-      <!-- Tabs -->
-      <ul class="nav nav-tabs mb-4" id="categoryTabs">
+      <!-- Category Tabs -->
+      <ul class="nav nav-tabs mb-3" id="categoryTabs">
         <li class="nav-item"><button class="nav-link active" data-cat="all">전체</button></li>
         <li class="nav-item"><button class="nav-link" data-cat="work">업무/마케팅</button></li>
         <li class="nav-item"><button class="nav-link" data-cat="dev">개발/코드</button></li>
@@ -67,7 +71,29 @@
         <li class="nav-item"><button class="nav-link" data-cat="edu">교육/학습</button></li>
       </ul>
 
-      <!-- Grid -->
+      <!-- Sort & Price Filters -->
+      <div class="row g-3 mb-4">
+        <div class="col-sm-6 col-lg-3">
+          <select id="sortSelect" class="form-select">
+            <option value="">정렬 없음</option>
+            <option value="popular">인기순</option>
+            <option value="priceAsc">가격 낮은순</option>
+            <option value="priceDesc">가격 높은순</option>
+          </select>
+        </div>
+        <div class="col-sm-6 col-lg-3 d-flex align-items-center gap-3">
+          <div class="form-check">
+            <input type="checkbox" id="freeOnly" class="form-check-input">
+            <label for="freeOnly" class="form-check-label">무료만</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="paidOnly" class="form-check-input">
+            <label for="paidOnly" class="form-check-label">유료만</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prompt Grid -->
       <div class="row g-4" id="promptGrid"></div>
 
       <!-- Bookmark Offcanvas -->
@@ -110,7 +136,7 @@
             </div>
           </div>
         </div>
-        <!-- 필요 시 추가 -->
+        <!-- 추가 FAQ 필요 시 여기에 -->
       </div>
     </div>
   </section>
@@ -168,7 +194,9 @@
           <div class="d-flex justify-content-between align-items-center mt-3">
             <span class="fw-bold fs-5" id="modalPrice"></span>
             <div class="d-flex gap-2">
-              <button class="btn btn-outline-secondary btn-sm" id="modalBookmarkBtn"><i class="bi bi-bookmark-plus"></i> 북마크</button>
+              <button class="btn btn-outline-secondary btn-sm" id="modalBookmarkBtn">
+                <i class="bi bi-bookmark-plus"></i> 북마크
+              </button>
               <button class="btn btn-dark btn-sm">구매하기(미구현)</button>
             </div>
           </div>
