@@ -1,0 +1,39 @@
+/* 커스텀 색상 */
+.text-orange { color: #ff6a00 !important; }
+.hero-bg { background: #ff6a00; }
+
+/* 카드 효과 */
+.prompt-card {
+  transition: transform .15s, box-shadow .15s;
+  cursor: pointer;
+}
+.prompt-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,.1);
+}
+
+.tag-badge {
+  font-size: 0.75rem;
+  margin-right: .25rem;
+}
+
+.bookmark-icon {
+  font-size: 1.2rem;
+  color: #ccc;
+  cursor: pointer;
+}
+.bookmark-icon.active {
+  color: #ff6a00;
+}
+
+/* 프롬프트 코드 프리뷰 */
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-size: 0.8rem;
+}
+
+/* 오프캔버스 내부 카드 간격 조정 */
+#bookmarkGrid .card {
+  cursor: pointer;
+}
